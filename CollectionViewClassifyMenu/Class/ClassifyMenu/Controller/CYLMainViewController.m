@@ -55,6 +55,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    //初始化左右按钮（两个按钮初始化方法命名无力吐槽）
     [self initLeftBarButtonItem];
     [self initWithRightNavItem];
 }
