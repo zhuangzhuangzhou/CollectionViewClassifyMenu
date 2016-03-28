@@ -36,8 +36,13 @@
     self.button = [CYLIndexPathButton buttonWithType:UIButtonTypeCustom];
     self.button.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     [self.contentView addSubview:self.button];
+<<<<<<< HEAD:CollectionViewClassifyMenu/Class/ClassifyMenu/View/CollectionViewCell.m
 //    [self.button cyl_generalStyle];//黑线框
    // [self.button cyl_homeStyle];
+=======
+//    [self.button cyl_generalStyle];
+//    [self.button cyl_homeStyle];
+>>>>>>> ChenYilong/master:CollectionViewClassifyMenu/Class/ClassifyMenu/View/CollectionViewCell.m
     [self.button cyl_chengNiStyle];
 }
 

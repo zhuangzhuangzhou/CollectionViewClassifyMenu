@@ -59,9 +59,14 @@ typedef void(^ISLimitWidth)(BOOL yesORNo, id data);
     if (_collectionHeaderMoreBtnHideBoolArray == nil) {
         _collectionHeaderMoreBtnHideBoolArray = [[NSMutableArray alloc] init];
         [self.dataSource enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+<<<<<<< HEAD:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
             
             [self.collectionHeaderMoreBtnHideBoolArray addObject:@YES];
         }];//这个遍历在这有什么用? [解答：给collectionHeader...Array 添加了 dataSource.count 次 的YES]
+=======
+            [self.collectionHeaderMoreBtnHideBoolArray addObject:@YES];
+        }];
+>>>>>>> ChenYilong/master:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
     }
     return _collectionHeaderMoreBtnHideBoolArray;
 }
@@ -78,7 +83,10 @@ typedef void(^ISLimitWidth)(BOOL yesORNo, id data);
     return _firstRowCellCountArray;
 }
 
+<<<<<<< HEAD:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
 //扩展（更多）当“更多”按钮被点击，该数组起作用
+=======
+>>>>>>> ChenYilong/master:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
 - (NSMutableArray *)expandSectionArray {
     if (_expandSectionArray == nil) {
         _expandSectionArray = [[NSMutableArray alloc] init];
@@ -179,8 +187,11 @@ typedef void(^ISLimitWidth)(BOOL yesORNo, id data);
     return cellWidth;
 }
 
+<<<<<<< HEAD:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
 
 //1.给定一个行数，判断是否显示“更多”这个按钮 （如果该组本身行数小于给定行数，肯定就没有更多按钮咯）2.(在给定行数大于该组行数时起作用)
+=======
+>>>>>>> ChenYilong/master:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
 - (void)judgeMoreButtonShowWhenDefaultRowsCount:(NSUInteger)defaultRowsCount {
     [self.rowsCountPerSection enumerateObjectsUsingBlock:^(id  __nonnull obj, NSUInteger idx, BOOL * __nonnull stop) {
         // 比较传进来的参数（行数） 和每组（最大可以支持）行数大小。
@@ -368,7 +379,10 @@ typedef void(^ISLimitWidth)(BOOL yesORNo, id data);
     NSArray *items = [NSArray arrayWithArray:[self.dataSource[section] objectForKey:kDataSourceSectionKey]];
     for (NSNumber *i in self.expandSectionArray) {
         if (section == [i integerValue]) {
+<<<<<<< HEAD:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
             NSLog(@"%lU",(unsigned long)items.count);
+=======
+>>>>>>> ChenYilong/master:CollectionViewClassifyMenu/Class/ClassifyMenu/Controller/CYLClassifyMenuViewController.m
             return [items count];
         }
     }
